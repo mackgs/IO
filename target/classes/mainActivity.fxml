@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="398.0" prefWidth="300.0" style="-fx-background-color: #8bb5f9; -fx-border-color: #8bb5f9; -fx-border-width: 1px;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainActivityContoller">
+   <bottom>
+      <TextArea fx:id="textArea" prefHeight="267.0" prefWidth="300.0" style="-fx-border-color: #8BB5F9; -fx-border-width: 2px;" BorderPane.alignment="CENTER" />
+   </bottom>
+   <center>
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="300.0" style="-fx-spacing: 50;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="manualButton" mnemonicParsing="false" prefHeight="45.0" prefWidth="110.0" style="-fx-background-radius: 30; -fx-border-radius: 30; -fx-background-color: #8bb5f9; -fx-border-width: 2px; -fx-border-color: #ffffff;" text="Manual" textFill="WHITE" onAction="#onManualButtonClick" >
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="autoButton" mnemonicParsing="false" prefHeight="45.0" prefWidth="110.0" style="-fx-background-radius: 30; -fx-border-radius: 30; -fx-background-color: #8bb5f9; -fx-border-width: 2px; -fx-border-color: #ffffff;" text="Auto" textFill="WHITE" onAction="#onAutoButtonClick">
+                <font>
+                    <Font name="System Bold" size="20.0" />
+                </font>
+            </Button>
+         </children>
+      </HBox>
+   </center>
+   <top>
+      <VBox alignment="CENTER" prefHeight="50.0" prefWidth="300.0" style="-fx-spacing: 10px;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="shipCounter" text="Ships: 0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@cruise%20(1).png" />
+                     </image>
+                  </ImageView>
+               </graphic></Label>
+            <Label fx:id="containerCounter" text="Containers : 0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@package.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Label>
+         </children>
+      </VBox>
+   </top>
+</BorderPane>
